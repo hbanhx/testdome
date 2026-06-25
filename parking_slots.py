@@ -1,7 +1,7 @@
 def get_minimum_slots(large_slots, small_slots, buses, cars):
     lots_used = 0
-    remaining_large_slots = 0
-    remaining_small_slots = 0
+    remaining_large_slots = large_slots
+    remaining_small_slots = small_slots
     remaining_buses = 0
     remaining_cars = 0
 
@@ -13,12 +13,14 @@ def get_minimum_slots(large_slots, small_slots, buses, cars):
         return -1
     
     if remaining_large_slots > 0:
-        if remaining_large_slots > ( cars // 3)
+            cars_in_large_slots = cars // 3
+            
+            remaining_large_slots > ( cars // 3):
             lots_used += remaining_large_slots
             remaining_cars = remaining_large_slots % 3
 
         if small_slots > remaining_cars:
-            lots_used += small_slots / cars
+            lots_used += remaining_small_slots / cars
         else:
             return -1
     
