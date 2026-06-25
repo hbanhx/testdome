@@ -8,17 +8,17 @@ def usage_count(bridge):
     #         ok = False
     ok = True
     while ok:
-        new_list = []
-        for b in bridge:
-            new_list.append(b - 2)
+        new_list = []                   # temporary bridge
+        for b in bridge:            
+            new_list.append(b - 2)      # integrity -2 
         
-        bridge = new_list
+        bridge = new_list               # replace with new bridge
         
-        for b in bridge:
+        for b in bridge:                # check integrety
             if b <= 0:
                 ok = False
 
-        if ok:
+        if ok:                          # count another pass
             result += 1
 
     return result
